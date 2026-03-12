@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Drag Papers ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- A pen by Developer Rahul  -->
+
+<div class="paper image">
+  <p> I LIVE U SO SO MUCH </p>
+    <p> YOU ARE MY WORLD 😍 </p>
+   <img src="images/1.jpeg" />
+</div>
+
+<div class="paper image">
+  <p></p>
+  <img src="images/2.jpeg" />
+</div>
+
+
+<div class="paper image">
+   <p></p>
+  <img src="images/3.jpeg" />
+</div>
+
+<div class="paper image">
+   <p></p>
+  <img src="images/4.jpeg" />
+</div>
+
+<div class="paper image">
+    <p></p>
+  <img src="images/5.jpeg" />
+</div>
+
+<div class="paper red">
+<p class="p1"> AND MY FAVORITE</p>
+<p class="p2"> PERSON, I TRUELY LOVE YOU😍</p>
+</div>
+
+<div class="paper red">
+<p class="p2"> ARISHA YOU ARE SO ❤️</p>
+<p class="p3"> SO PERFECT MERA BACCHA 😍</p>
+</div>
+
+<div class="paper">
+<p class="p1">YOU ARE BEAUTIFUL</p>
+  <p class="p1">KIND AND AMAZING <span style="color: red !important;">❤️</span></p>
+</div>
+
+<div class="paper">
+<p class="p1">Drag the papers to move!</p>
+</div>
+<!-- partial -->
+
+  <button onclick="showLove()">Click to see why I love you ❤️</button>
+  <p id="text"></p>
+
+  <script  src="./script.js"></script>
+
+  <div class="hearts"></div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+  document.querySelector(".hearts").appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+<script>
+let reasons = [
+"You make my world brighter",
+"Your smile is my favorite thing",
+"You make my heart happy",
+"You are my forever"
+];
+
+function showLove(){
+document.getElementById("text").innerText =
+reasons[Math.floor(Math.random()*reasons.length)];
+}
+</script>
+
+</body>
+</html>
